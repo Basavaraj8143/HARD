@@ -1,0 +1,35 @@
+Given an integer num, repeatedly add its digits until the result has only one digit, and return its
+
+Concept:
+
+If you just simulate digit-sum repeatedly, it works but is slower.
+There’s a mathematical trick (Digital Root):
+Answer = 1 + (num - 1) % 9 (if num > 0).
+If num = 0, answer = 0.
+This runs in O(1) time.
+
+Brute Force (Loop)
+class Solution {
+public:
+    int addDigits(int num) {
+        while (num >= 10) { // more than 1 digit
+            int sum = 0;
+            while (num > 0) {
+                sum += num % 10;
+                num /= 10;
+            }
+            num = sum;
+        }
+        return num;
+    }
+};
+
+
+Optimized (Digital Root)
+class Solution {
+public:
+    int addDigits(int num) {
+        if (num == 0) return 0;
+        return 1 + (num - 1) % 9;
+    }
+};
