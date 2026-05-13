@@ -1,0 +1,252 @@
+[
+  {
+    "problem": "Check Even or Odd",
+    "explanation": "Determine whether a number is divisible by 2.",
+    "code": "if(n % 2 == 0) cout << \"Even\"; else cout << \"Odd\";"
+  },
+  {
+    "problem": "Check Prime Number",
+    "explanation": "Check if a number has exactly two divisors.",
+    "code": "bool prime=true; for(int i=2;i*i<=n;i++) if(n%i==0) prime=false;"
+  },
+  {
+    "problem": "Factorial of a Number",
+    "explanation": "Multiply all integers from 1 to n.",
+    "code": "long long fact=1; for(int i=1;i<=n;i++) fact*=i;"
+  },
+  {
+    "problem": "Fibonacci Series",
+    "explanation": "Generate numbers where each term is sum of previous two.",
+    "code": "int a=0,b=1,c; for(int i=0;i<n;i++){ cout<<a; c=a+b; a=b; b=c; }"
+  },
+  {
+    "problem": "Reverse a Number",
+    "explanation": "Reverse digits of a number.",
+    "code": "while(n){ rev=rev*10+n%10; n/=10; }"
+  },
+  {
+    "problem": "Check Palindrome Number",
+    "explanation": "Check whether number reads same forward and backward.",
+    "code": "int temp=n,rev=0; while(n){ rev=rev*10+n%10; n/=10; } if(temp==rev)"
+  },
+  {
+    "problem": "Armstrong Number",
+    "explanation": "Sum of cubes of digits equals original number.",
+    "code": "while(n){ d=n%10; sum+=d*d*d; n/=10; }"
+  },
+  {
+    "problem": "Sum of Digits",
+    "explanation": "Add all digits of a number.",
+    "code": "while(n){ sum+=n%10; n/=10; }"
+  },
+  {
+    "problem": "Largest of Three Numbers",
+    "explanation": "Find maximum among three numbers.",
+    "code": "cout << max(a,max(b,c));"
+  },
+  {
+    "problem": "GCD of Two Numbers",
+    "explanation": "Find greatest common divisor using Euclidean algorithm.",
+    "code": "while(b){ int t=b; b=a%b; a=t; }"
+  },
+  {
+    "problem": "LCM of Two Numbers",
+    "explanation": "Least common multiple using GCD.",
+    "code": "lcm=(a*b)/gcd(a,b);"
+  },
+  {
+    "problem": "Check Leap Year",
+    "explanation": "Check leap year conditions.",
+    "code": "if((y%4==0 && y%100!=0)||y%400==0)"
+  },
+  {
+    "problem": "Count Vowels and Consonants",
+    "explanation": "Count vowels and consonants in string.",
+    "code": "for(char c:s){ if(strchr(\"aeiouAEIOU\",c)) v++; else if(isalpha(c)) cons++; }"
+  },
+  {
+    "problem": "Reverse a String",
+    "explanation": "Reverse characters in string.",
+    "code": "reverse(s.begin(),s.end());"
+  },
+  {
+    "problem": "Check Anagram",
+    "explanation": "Check if two strings contain same characters.",
+    "code": "sort(a.begin(),a.end()); sort(b.begin(),b.end()); if(a==b)"
+  },
+  {
+    "problem": "Remove Duplicates from String",
+    "explanation": "Keep only unique characters.",
+    "code": "set<char> st(s.begin(),s.end());"
+  },
+  {
+    "problem": "Find Second Largest in Array",
+    "explanation": "Find second highest element.",
+    "code": "for(int x:arr){ if(x>first){ second=first; first=x; } else if(x>second && x!=first) second=x; }"
+  },
+  {
+    "problem": "Linear Search",
+    "explanation": "Search element sequentially.",
+    "code": "for(int i=0;i<n;i++) if(arr[i]==key)"
+  },
+  {
+    "problem": "Binary Search",
+    "explanation": "Search in sorted array using divide and conquer.",
+    "code": "binary_search(arr.begin(),arr.end(),key);"
+  },
+  {
+    "problem": "Bubble Sort",
+    "explanation": "Repeatedly swap adjacent elements.",
+    "code": "for(int i=0;i<n-1;i++) for(int j=0;j<n-i-1;j++) if(arr[j]>arr[j+1]) swap(arr[j],arr[j+1]);"
+  },
+  {
+    "problem": "Selection Sort",
+    "explanation": "Select minimum element each iteration.",
+    "code": "for(int i=0;i<n;i++){ int mn=i; for(int j=i+1;j<n;j++) if(arr[j]<arr[mn]) mn=j; swap(arr[i],arr[mn]); }"
+  },
+  {
+    "problem": "Insertion Sort",
+    "explanation": "Insert elements into sorted position.",
+    "code": "for(int i=1;i<n;i++){ int key=arr[i],j=i-1; while(j>=0&&arr[j]>key){ arr[j+1]=arr[j]; j--; } arr[j+1]=key; }"
+  },
+  {
+    "problem": "Matrix Addition",
+    "explanation": "Add corresponding elements of matrices.",
+    "code": "c[i][j]=a[i][j]+b[i][j];"
+  },
+  {
+    "problem": "Transpose of Matrix",
+    "explanation": "Swap rows and columns.",
+    "code": "t[j][i]=a[i][j];"
+  },
+  {
+    "problem": "Count Frequency of Element in Array",
+    "explanation": "Count occurrences of an element.",
+    "code": "count(arr.begin(),arr.end(),x);"
+  },
+  {
+    "problem": "Check if Array is Sorted",
+    "explanation": "Verify ascending order.",
+    "code": "is_sorted(arr.begin(),arr.end());"
+  },
+  {
+    "problem": "Merge Two Arrays",
+    "explanation": "Combine two arrays into one.",
+    "code": "vector<int> c=a; c.insert(c.end(),b.begin(),b.end());"
+  },
+  {
+    "problem": "Find Missing Number",
+    "explanation": "Find missing number from 1 to N.",
+    "code": "missing=n*(n+1)/2-sum;"
+  },
+  {
+    "problem": "Count Words in String",
+    "explanation": "Count words separated by spaces.",
+    "code": "stringstream ss(s); while(ss>>word) count++;"
+  },
+  {
+    "problem": "Remove All Spaces from String",
+    "explanation": "Delete spaces from string.",
+    "code": "s.erase(remove(s.begin(),s.end(),' '),s.end());"
+  },
+  {
+    "problem": "Find Duplicate Elements in Array",
+    "explanation": "Identify repeated elements.",
+    "code": "unordered_map<int,int> mp; for(int x:arr) mp[x]++;"
+  },
+  {
+    "problem": "Move All Zeros to End",
+    "explanation": "Shift all zeros to array end.",
+    "code": "stable_partition(arr.begin(),arr.end(),[](int x){ return x!=0; });"
+  },
+  {
+    "problem": "Rotate Array Right by 1",
+    "explanation": "Shift elements one step right.",
+    "code": "rotate(arr.rbegin(),arr.rbegin()+1,arr.rend());"
+  },
+  {
+    "problem": "Check Palindrome String",
+    "explanation": "Check if string reads same backward.",
+    "code": "string t=s; reverse(t.begin(),t.end()); if(s==t)"
+  },
+  {
+    "problem": "Count Number of Digits",
+    "explanation": "Count total digits in number.",
+    "code": "while(n){ count++; n/=10; }"
+  },
+  {
+    "problem": "Sum of Elements in Array",
+    "explanation": "Add all array elements.",
+    "code": "int sum=accumulate(arr.begin(),arr.end(),0);"
+  },
+  {
+    "problem": "Find Minimum Element in Array",
+    "explanation": "Find smallest array element.",
+    "code": "cout << *min_element(arr.begin(),arr.end());"
+  },
+  {
+    "problem": "Pattern Printing",
+    "explanation": "Print right triangle star pattern.",
+    "code": "for(int i=1;i<=n;i++){ for(int j=1;j<=i;j++) cout<<\"*\"; cout<<endl; }"
+  },
+  {
+    "problem": "Power of a Number",
+    "explanation": "Calculate base raised to exponent.",
+    "code": "cout << pow(base,exp);"
+  },
+  {
+    "problem": "Decimal to Binary",
+    "explanation": "Convert decimal number to binary.",
+    "code": "while(n){ bin=to_string(n%2)+bin; n/=2; }"
+  },
+  {
+    "problem": "Binary to Decimal",
+    "explanation": "Convert binary number to decimal.",
+    "code": "int dec=stoi(bin,nullptr,2);"
+  },
+  {
+    "problem": "Check Perfect Number",
+    "explanation": "Sum of divisors equals number.",
+    "code": "for(int i=1;i<n;i++) if(n%i==0) sum+=i;"
+  },
+  {
+    "problem": "Strong Number",
+    "explanation": "Sum of factorial of digits equals number.",
+    "code": "while(n){ sum+=fact(n%10); n/=10; }"
+  },
+  {
+    "problem": "Count Even and Odd in Array",
+    "explanation": "Count even and odd numbers.",
+    "code": "for(int x:arr) (x%2==0)?even++:odd++;"
+  },
+  {
+    "problem": "Find Intersection of Two Arrays",
+    "explanation": "Find common elements.",
+    "code": "set_intersection(a.begin(),a.end(),b.begin(),b.end(),back_inserter(c));"
+  },
+  {
+    "problem": "Check Substring",
+    "explanation": "Check if substring exists.",
+    "code": "if(str.find(sub)!=string::npos)"
+  },
+  {
+    "problem": "Remove Specific Character from String",
+    "explanation": "Delete all occurrences of a character.",
+    "code": "s.erase(remove(s.begin(),s.end(),ch),s.end());"
+  },
+  {
+    "problem": "Sum of Prime Numbers up to N",
+    "explanation": "Add all prime numbers till N.",
+    "code": "for(int i=2;i<=n;i++) if(isPrime(i)) sum+=i;"
+  },
+  {
+    "problem": "Reverse Words in Sentence",
+    "explanation": "Reverse order of words.",
+    "code": "reverse(words.begin(),words.end());"
+  },
+  {
+    "problem": "Two Sum Problem",
+    "explanation": "Find two numbers whose sum equals target.",
+    "code": "unordered_map<int,int> mp; for(int i=0;i<n;i++){ if(mp.count(target-arr[i])) return; mp[arr[i]]=i; }"
+  }
+]
