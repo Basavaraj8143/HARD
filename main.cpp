@@ -25,9 +25,37 @@ int main(){
   cout<<"values are:&x,&y" <<x<<y;
 }
 */
+/*
+/*
 #include <iostream>
 using namespace std;
 int main()
 {
-  cout << "hello" << endl;
+  int n;
+  cout << "enter the value for n";
+  cin >> n;
+  if (n % 2 == 0)
+  {
+    cout << "even";
+  }
+  else
+  {
+    cout << "odd";
+  }
+}
+*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+  int n;
+  cin >> n;
+  int fact = 1;
+  for (int i = 1; i <= n; i++)
+  {
+    fact = fact * i;
+  }
+  cout << "factorial is" << fact;
+  return 0;
 }
