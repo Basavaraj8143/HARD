@@ -1,0 +1,19 @@
+Check if any number appears at least twice in the array.
+
+Example:
+nums = [1,2,3,1] → true (1 repeats)
+nums = [1,2,3,4] → false (no duplicates)
+
+Code: Contains Duplicate
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> seen;
+        for (int n : nums) {
+            if (seen.count(n)) return true;
+            seen.insert(n);
+        }
+        return false;
+    }
+};

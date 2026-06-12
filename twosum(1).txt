@@ -1,0 +1,39 @@
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+
+Brute Force (O(n²)):
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return {i, j}; // return indices
+                }
+            }
+        }
+        return {}; // no solution
+    }
+};
+
+
+
+Optimized with HashMap (O(n))
+
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> mp; // value -> index
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+            if (mp.find(complement) != mp.end()) {
+                return {mp[complement], i};
+            }
+            mp[nums[i]] = i; // store current number
+        }
+        return {}; // no solution
+    }
+};
